@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>袖ケ浦市蔵波台5丁目 新築分譲住宅 全2棟｜ZERO FIT（HOUSEFIT）</title>
+<meta name="description" content="千葉県袖ケ浦市蔵波台5丁目の新築分譲住宅、全2棟。ハウスフィットが手がける高性能分譲住宅ブランド「ZERO FIT」。高台に位置し陽当たり良好、南側道路の整形地。売主物件につき仲介手数料不要。">
+<meta name="keywords" content="袖ケ浦市 新築一戸建て,袖ケ浦市 分譲住宅,袖ケ浦市 建売,蔵波台 新築,蔵波台 分譲住宅,長浦駅 新築一戸建て,ZERO FIT,ハウスフィット">
+<meta property="og:type" content="website">
+<meta property="og:title" content="袖ケ浦市蔵波台5丁目 新築分譲住宅 全2棟｜ZERO FIT（HOUSEFIT）">
+<meta property="og:description" content="高台に位置し陽当たり良好、南側道路の整形地。全2棟の新築分譲住宅。売主物件につき仲介手数料不要。">
+<meta property="og:locale" content="ja_JP">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   袖ケ浦市蔵波台5丁目 新築分譲住宅LP（ZERO FIT / HOUSEFIT）
+   実装メモ：
+   - 本文・数値は DATA オブジェクト（このファイル下部の <script> 内）で一元管理しています。
+   - 写真は IMAGE PLACEHOLDER として仮表示しています。差し替えは DATA.assets.images の
+     該当キーに画像URLを設定してください（1箇所の変更で反映されます）。
+   - 掲載写真はすべて 1:1（正方形）で統一しています。FVなど横長に見せたい枠は、
+     正方形素材を object-fit:cover で中央クロップして横長に見せる設計です。
+   - 本ファイルは公開用のため、TODO・確認中などの仮文言は含めていません。
+   ========================================================================== */
+
+:root{
+  /* WHITE-FIRST パレット：白を主役に、黒(#111111)をポイントとして効かせる。
+     #4E4449 はブランド補助色として、ラベルなど小さな要素にのみ使用する。
+     OS/ブラウザのダークモード設定に関わらず、常にこのライトパレットを表示する。 */
+  --bg:#FFFFFF;
+  --bg-alt:#F7F7F5;
+  --surface:#FFFFFF;
+  --text:#111111;        /* 見出し・本文メイン・ロゴ・ナビ・CTA・数字・アイコン・線 */
+  --text-body:#111111;
+  --text-soft:#666666;   /* 補足・キャプション・距離・注意書き */
+  --brand:#4E4449;       /* ブランド補助色（ラベル・タグラインなど、面積は最小限に） */
+  --line:#D9D9D9;
+  --accent:#111111;
+  --on-accent:#FFFFFF;
+  --header-bg:rgba(255,255,255,0.99);
+  --shadow:0 8px 24px rgba(0,0,0,0.05);
+  /* 訴求CTAボタン専用：LP内で唯一の強いアクセントカラー（添付参考画像のグリーンに合わせて設定） */
+  --cta-green-light:#7EE2A8;
+  --cta-green:#17C169;
+  --cta-green-dark:#0EA355;
+  --placeholder-bg:repeating-linear-gradient(135deg,#F3F3F3,#F3F3F3 12px,#EBEBEB 12px,#EBEBEB 24px);
+
+  /* フォントは役割ごとに4種類で統一する。
+     01 DISPLAY：大きな英字演出・数字（Cormorant Garamond）
+     02 LABEL：英字ラベル・ナビ・CTA（Montserrat／日本語混在時はNoto Sans JPへ自動フォールバック）
+     03 JAPANESE HEADING：日本語見出し（Noto Serif JP を明示指定）
+     04 BODY：本文・説明文（Noto Sans JP） */
+  --font-display:'Cormorant Garamond','Noto Serif JP',serif;
+  --font-serif-jp:'Noto Serif JP',serif;
+  --font-sans:'Noto Sans JP',"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --font-label:'Montserrat','Noto Sans JP',"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+
+  --container:1200px;
+  --section-pad:clamp(64px,10vw,160px);
+  --gutter:clamp(20px,4vw,64px);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-sans);
+  font-weight:400;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font:inherit;background:none;border:none;cursor:pointer;color:inherit;}
+h1,h2,h3,h4{margin:0;font-weight:500;text-wrap:balance;}
+p{margin:0;}
+.container{max-width:var(--container);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter);}
+.section{padding:var(--section-pad) 0;}
+.section--alt{background:var(--bg-alt);}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+:focus-visible{outline:2px solid var(--text);outline-offset:3px;}
+
+/* 数字を強調表示する共通ユーティリティ（電話番号・距離・徒歩分数など、
+   役割の異なる数字がページ内でバラバラなフォントに見えないよう共通化する） */
+.num{font-family:var(--font-label);font-weight:600;letter-spacing:0.01em;}
+
+.eyebrow{
+  display:block;
+  font-family:var(--font-label);
+  font-weight:500;
+  font-size:0.72rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--brand);
+  margin-bottom:14px;
+}
+.heading-en{
+  font-family:var(--font-serif-jp);
+  font-size:clamp(2rem,4.2vw,3.2rem);
+  font-weight:500;
+  letter-spacing:0.02em;
+  line-height:1.45;
+  color:var(--text);
+}
+.heading-jp{
+  font-family:var(--font-serif-jp);
+  font-size:clamp(1.4rem,2.6vw,1.9rem);
+  line-height:1.7;
+  color:var(--text);
+  margin-top:10px;
+}
+.lead{
+  max-width:46ch;
+  color:var(--text-body);
+  font-size:1rem;
+  line-height:1.85;
+}
+.section-head{margin-bottom:clamp(40px,6vw,72px);}
+.section-head.center{text-align:center;margin-left:auto;margin-right:auto;}
+.section-head.center .lead{margin-left:auto;margin-right:auto;}
+
+/* reveal animation */
+.reveal{opacity:1;transform:none;}
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s ease, transform 0.9s ease;}
+  .reveal.is-visible{opacity:1;transform:none;}
+}
+
+/* placeholder image block（元素材は 1:1 を想定。横長枠は object-fit:cover で中央クロップ） */
+.ph{
+  position:relative;
+  background:var(--placeholder-bg);
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:var(--text-soft);
+}
+.ph::after{
+  content:attr(data-label);
+  font-family:var(--font-label);
+  font-size:0.68rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  text-align:center;
+  padding:10px 14px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:2px;
+  max-width:80%;
+}
+.ph--slowzoom img{transition:transform 6s ease;}
+.ph--slowzoom:hover img{transform:scale(1.06);}
+.ph.has-image::after{content:none;}
+.ph.has-image img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* ---------------- HEADER（2段構成） ---------------- */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--header-bg);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;
+  box-shadow:0 2px 20px rgba(0,0,0,0.06);
+  transition:border-color .3s ease, box-shadow .3s ease;
+}
+.site-header.scrolled{border-bottom-color:var(--line);box-shadow:0 4px 20px rgba(0,0,0,0.08);}
+
+.header-utility{
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+  max-height:44px;
+  transition:max-height .3s ease, opacity .3s ease, border-color .3s ease;
+}
+.site-header.scrolled .header-utility{max-height:0;opacity:0;border-bottom-color:transparent;}
+.header-utility-inner{
+  max-width:var(--container);margin:0 auto;padding:10px var(--gutter);
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+}
+.header-utility .brandline{
+  font-family:var(--font-label);font-size:0.7rem;font-weight:500;letter-spacing:0.08em;color:var(--brand);text-transform:uppercase;
+}
+.header-utility .contact{display:flex;align-items:center;gap:18px;font-size:0.8rem;font-weight:500;color:var(--text-soft);flex-wrap:wrap;}
+.header-utility .contact a{color:var(--text);font-family:var(--font-label);font-weight:600;letter-spacing:0.01em;}
+@media (max-width:640px){.header-utility{display:none;}}
+
+.header-inner{
+  max-width:var(--container);margin:0 auto;padding:0 var(--gutter);
+  display:flex;align-items:center;justify-content:space-between;
+  height:76px;transition:height .3s ease;
+}
+.site-header.scrolled .header-inner{height:64px;}
+.logo{
+  font-family:var(--font-display);font-size:1.5rem;font-weight:600;letter-spacing:0.06em;color:var(--brand);
+  display:flex;flex-direction:column;line-height:1.1;
+}
+.logo small{font-family:var(--font-label);font-size:0.66rem;font-weight:700;letter-spacing:0.08em;color:var(--brand);margin-top:4px;white-space:nowrap;}
+@media (max-width:480px){.logo small{font-size:0.54rem;letter-spacing:0.04em;}}
+.main-nav{display:flex;gap:clamp(14px,2vw,30px);align-items:center;}
+.main-nav a{
+  font-family:var(--font-label);font-size:0.76rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--text);position:relative;padding:4px 0;
+}
+.main-nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--text);transition:width .3s ease;}
+.main-nav a:hover::after,.main-nav a:focus-visible::after{width:100%;}
+.header-cta{ white-space:nowrap; }
+
+/* ==========================================================================
+   CTA BUTTON SYSTEM（LP全体で唯一のアクセントカラー：鮮やかなグリーン）
+   共通クラス .btn-cta に、配置ごとのサイズだけを btn-cta--* で調整する。
+   色・角丸感・立体感・hover/active挙動はすべて共通。
+   ========================================================================== */
+.btn-cta{
+  position:relative;overflow:hidden;
+  display:inline-flex;align-items:center;justify-content:center;gap:5px;
+  font-family:var(--font-label);font-weight:700;letter-spacing:0.01em;
+  color:#FFFFFF;border:none;
+  background:linear-gradient(180deg, var(--cta-green-light) 0%, var(--cta-green) 42%, var(--cta-green-dark) 100%);
+  box-shadow:0 6px 16px rgba(9,74,46,0.28), inset 0 1px 0 rgba(255,255,255,0.4);
+  text-shadow:0 1px 2px rgba(0,40,20,0.35);
+  transition:box-shadow .25s ease, filter .25s ease, transform .12s ease;
+  white-space:nowrap;
+  text-align:center;
+}
+.btn-cta::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:44%;
+  background:linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0));
+  pointer-events:none;
+}
+.btn-cta:hover{filter:brightness(1.07);box-shadow:0 8px 20px rgba(9,74,46,0.34), inset 0 1px 0 rgba(255,255,255,0.4);}
+.btn-cta:active{transform:translateY(1px);filter:brightness(0.97);box-shadow:0 3px 10px rgba(9,74,46,0.28), inset 0 1px 0 rgba(255,255,255,0.35);}
+
+.btn-cta--header{font-size:0.72rem;padding:12px 18px;border-radius:14px;}
+.btn-cta--inline{font-size:0.84rem;padding:15px 30px;border-radius:14px;}
+.btn-cta--main{font-size:0.94rem;padding:19px 44px;border-radius:18px;}
+.btn-cta--fixed{width:100%;font-size:0.9rem;padding:16px 20px;border-radius:14px;}
+.btn-cta--mobilenav{font-size:0.95rem;padding:16px 34px;border-radius:16px;}
+@media (max-width:380px){.btn-cta--header{font-size:0.66rem;padding:11px 14px;}}
+.hamburger{display:none;width:40px;height:40px;position:relative;}
+.hamburger span{position:absolute;left:8px;right:8px;height:1px;background:var(--text);transition:all .3s ease;}
+.hamburger span:nth-child(1){top:15px;}
+.hamburger span:nth-child(2){top:20px;}
+.hamburger span:nth-child(3){top:25px;}
+.hamburger.open span:nth-child(1){transform:translateY(5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-5px) rotate(-45deg);}
+
+.mobile-nav{
+  position:fixed;inset:64px 0 0 0;background:var(--bg);z-index:99;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;
+  transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .3s ease, transform .3s ease;
+  overflow-y:auto;padding:32px 0;
+}
+.mobile-nav.open{opacity:1;transform:none;pointer-events:auto;}
+.mobile-nav a{font-family:var(--font-label);font-size:0.95rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;}
+.mobile-nav .header-cta{margin-top:8px;}
+.mobile-nav-contact{
+  margin-top:12px;text-align:center;font-size:0.8rem;color:var(--text-soft);line-height:1.9;
+}
+.mobile-nav-contact a{color:var(--text);font-family:var(--font-label);font-weight:600;font-size:1rem;letter-spacing:0.01em;}
+
+.sticky-cta{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:98;
+  background:var(--surface);
+  padding:10px var(--gutter);
+  padding-bottom:max(10px, env(safe-area-inset-bottom));
+  border-top:1px solid var(--line);
+  box-shadow:0 -6px 20px rgba(0,0,0,0.08);
+}
+.sticky-cta a{display:flex;width:100%;}
+@media (max-width:899px){
+  .main-nav,.header-cta{display:none;}
+  .hamburger{display:block;}
+  .sticky-cta{display:block;}
+  body{padding-bottom:80px;}
+}
+
+/* ---------------- HERO ---------------- */
+.hero{
+  position:relative;padding-top:120px;
+  display:flex;flex-direction:column;
+}
+@media (max-width:640px){.hero{padding-top:84px;}}
+/* TOPを開いた瞬間、家の写真がヘッダー直下から画面いっぱいに表示されるよう、
+   ビューポート高さ基準でサイズを決める（アスペクト比固定ではなく可変）。 */
+.hero-media{
+  width:100%;
+  height:calc(100vh - 120px);
+  height:calc(100dvh - 120px);
+  min-height:420px;
+  max-height:900px;
+}
+@media (max-width:640px){
+  .hero-media{
+    height:calc(100vh - 84px);
+    height:calc(100dvh - 84px);
+    min-height:460px;
+    max-height:760px;
+  }
+}
+/* PC/SPで別画像を出し分ける picture 要素（renderHeroImage() が挿入） */
+.hero-media picture{display:block;width:100%;height:100%;}
+.hero-media img{object-position:center center;}
+@media (max-width:640px){.hero-media img{object-position:center 40%;}}
+.hero-copy{
+  max-width:var(--container);margin:0 auto;width:100%;
+  padding:clamp(36px,6vw,64px) var(--gutter) clamp(48px,7vw,88px);
+  text-align:left;
+}
+.hero-copy .eyebrow{font-size:0.8rem;}
+.hero-title{
+  font-family:var(--font-serif-jp);
+  font-size:clamp(1.7rem,3.6vw,2.7rem);
+  font-weight:500;letter-spacing:0.01em;line-height:1.5;color:var(--text);
+}
+.hero-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+.hero-meta div{font-family:var(--font-label);font-weight:500;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-soft);}
+.hero-meta strong{display:block;font-family:var(--font-serif-jp);font-size:1rem;letter-spacing:0;color:var(--text);margin-top:6px;text-transform:none;}
+
+/* ---------------- PICKUP（通過点として設計する情報ストリップ） ---------------- */
+.pickup-strip{background:var(--bg-alt);padding:32px 0;}
+.pickup-strip-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
+.pickup-strip-head .eyebrow{margin-bottom:0;}
+.pickup-strip-head .sub{font-family:var(--font-sans);font-size:0.8rem;color:var(--text-soft);}
+
+.pickup-strip-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.pickup-strip-item{
+  display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:104px;
+  padding:24px 16px;text-align:center;border-left:1px solid var(--line);
+  transition-delay:calc(var(--i, 0) * 0.08s);
+}
+.pickup-strip-item:first-child{border-left:none;}
+.pickup-strip-item .val{font-family:var(--font-serif-jp);font-weight:500;font-size:1.3rem;color:var(--text);line-height:1.4;}
+.pickup-strip-item .val small{display:block;margin-top:4px;font-family:var(--font-sans);font-size:0.72rem;font-weight:400;color:var(--text-soft);}
+.pickup-strip-item .lbl{display:block;margin-top:8px;font-family:var(--font-label);font-weight:500;font-size:0.68rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-soft);}
+
+@media (max-width:760px){
+  .pickup-strip-grid{grid-template-columns:repeat(2,1fr);}
+  .pickup-strip-item{padding:16px 10px;border-left:none;}
+  .pickup-strip-item:nth-child(2n){border-left:1px solid var(--line);}
+  .pickup-strip-item:nth-child(n+3){border-top:1px solid var(--line);}
+  .pickup-strip-item .val{font-size:1.05rem;}
+}
+
+/* ---------------- CONCEPT（ZERO FITのブランドコンセプト。白背景・黒文字・余白のみで構成） ---------------- */
+.concept-wrap{text-align:center;max-width:760px;margin:0 auto;}
+.concept-catch{
+  font-family:var(--font-serif-jp);
+  font-size:clamp(1.8rem,5vw,3.4rem);
+  font-weight:500;
+  line-height:1.65;
+  letter-spacing:0.02em;
+  color:var(--text);
+  margin-top:22px;
+}
+.concept-lead{
+  margin:28px auto 0;
+  max-width:46ch;
+  text-align:center;
+}
+.concept-pillars{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  margin-top:clamp(48px,7vw,80px);
+  border-top:1px solid var(--line);
+}
+.concept-pillars div{
+  padding:28px 24px;text-align:center;border-left:1px solid var(--line);
+}
+.concept-pillars div:first-child{border-left:none;}
+.concept-pillars span{
+  display:block;font-family:var(--font-label);font-weight:500;font-size:0.72rem;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--brand);
+}
+.concept-pillars p{margin-top:10px;font-family:var(--font-sans);font-size:0.92rem;color:var(--text-body);line-height:1.7;}
+@media (max-width:700px){
+  .concept-pillars{grid-template-columns:1fr;}
+  .concept-pillars div{border-left:none;border-top:1px solid var(--line);padding:22px 12px;}
+  .concept-pillars div:first-child{border-top:none;}
+}
+
+/* ---------------- COMPANY ---------------- */
+.company-wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:clamp(32px,6vw,80px);align-items:center;}
+@media (max-width:900px){.company-wrap{grid-template-columns:1fr;}}
+.company-wrap .ph{aspect-ratio:1/1;}
+.company-body .heading-en{font-size:clamp(1.5rem,2.6vw,2.15rem);line-height:1.5;}
+.company-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;}
+@media (max-width:560px){.company-flow{grid-template-columns:1fr;}}
+.company-flow div{border-top:1px solid var(--line);padding-top:14px;}
+.company-flow span{font-family:var(--font-label);font-weight:500;font-size:0.68rem;letter-spacing:0.12em;color:var(--brand);text-transform:uppercase;}
+.company-flow p{margin-top:8px;font-family:var(--font-sans);font-size:0.92rem;color:var(--text-body);}
+
+/* ---------------- PLAN / GALLERY（住まいの雰囲気を見せるビジュアルブレイク） ---------------- */
+.plan-visual-grid{
+  display:grid;grid-template-columns:60fr 40fr;gap:clamp(28px,4.5vw,56px);align-items:start;
+}
+@media (max-width:760px){
+  .plan-visual-grid{grid-template-columns:1fr;gap:44px;}
+}
+.plan-visual-item{display:flex;flex-direction:column;}
+.plan-visual-label{
+  display:block;font-family:var(--font-label);font-weight:500;font-size:0.7rem;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--text-soft);margin-bottom:12px;
+}
+.plan-visual-item .ph{aspect-ratio:4/3;border:none;}
+
+/* 「INTERIOR IMAGE」演出：2枚を左→右にわずかにずらして、
+   写真はゆっくりズームが収まりながら、ラベルは少し遅れてふわっと現れる。 */
+.plan-visual-item--sub{transition-delay:0.18s;}
+.plan-visual-item .plan-visual-label{
+  opacity:0;transform:translateY(8px);
+  transition:opacity 0.7s ease, transform 0.7s ease;
+  transition-delay:0.25s;
+}
+.plan-visual-item--sub .plan-visual-label{transition-delay:0.4s;}
+.plan-visual-item.is-visible .plan-visual-label{opacity:1;transform:none;}
+.plan-visual-item .ph.has-image img{
+  transform:scale(1.12);
+  transition:transform 1.5s cubic-bezier(0.22,1,0.36,1);
+}
+.plan-visual-item--sub .ph.has-image img{transition-delay:0.15s;}
+.plan-visual-item.is-visible .ph.has-image img{transform:scale(1);}
+@media (prefers-reduced-motion: reduce){
+  .plan-visual-item .plan-visual-label{opacity:1;transform:none;transition:none;}
+  .plan-visual-item .ph.has-image img{transform:none;transition:none;}
+}
+
+/* ---------------- LOCATION（エリア紹介） ---------------- */
+.location-wrap{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(32px,6vw,80px);align-items:center;}
+@media (max-width:900px){.location-wrap{grid-template-columns:1fr;}}
+.location-wrap .ph{aspect-ratio:1/1;}
+.location-body .lead{max-width:none;margin-top:22px;}
+.location-points{margin-top:32px;display:flex;flex-direction:column;gap:16px;}
+.location-points li{display:flex;gap:14px;font-size:0.95rem;color:var(--text-body);list-style:none;}
+.location-points li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brand);margin-top:10px;flex:none;}
+
+/* ---------------- LIVING FACILITIES ---------------- */
+.loc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:860px){.loc-cards{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.loc-cards{grid-template-columns:1fr;}}
+.loc-card{
+  display:flex;align-items:center;gap:18px;
+  border:1px solid var(--line);background:var(--surface);padding:16px;border-radius:2px;
+  transition:box-shadow .3s ease, transform .3s ease;
+}
+.loc-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+.loc-card .thumb{width:112px;height:112px;flex:none;border-radius:2px;overflow:hidden;}
+.loc-card .thumb.ph::after{font-size:0.52rem;padding:4px 6px;letter-spacing:0.06em;}
+.loc-card .body{flex:1;min-width:0;}
+.loc-card .name{font-size:0.95rem;color:var(--text);line-height:1.5;}
+.loc-card .dist{margin-top:8px;font-family:var(--font-sans);font-size:0.82rem;letter-spacing:0.01em;color:var(--text-soft);}
+.loc-card .dist .num{color:var(--text);font-size:0.92rem;}
+.loc-note{margin-top:24px;text-align:center;color:var(--text-soft);font-size:0.92rem;}
+
+/* ---------------- EQUIPMENT / PERFORMANCE（設備・仕様一覧型） ---------------- */
+.equip-group{margin-top:64px;}
+.equip-group:first-of-type{margin-top:0;}
+.equip-group-head{
+  display:flex;align-items:baseline;gap:16px;margin-bottom:36px;flex-wrap:wrap;
+  padding-bottom:14px;border-bottom:1px solid var(--line);
+}
+.equip-group-head .en{font-family:var(--font-display);font-weight:500;font-size:1.35rem;color:var(--text);}
+.equip-group-head .jp{font-family:var(--font-sans);font-size:0.84rem;color:var(--text-soft);}
+
+.equip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 32px;}
+@media (max-width:860px){.equip-grid{grid-template-columns:1fr;gap:44px;}}
+
+.equip-block{display:flex;flex-direction:column;}
+.equip-block > .en{
+  font-family:var(--font-label);font-weight:500;font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--text-soft);margin-bottom:8px;
+}
+.equip-block .title{
+  font-family:var(--font-serif-jp);font-size:1.1rem;line-height:1.6;color:var(--text);margin-bottom:16px;
+  min-height:calc(1.6em * 2);
+}
+.equip-block .imgs{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:16px;}
+.equip-block .imgs.dual{grid-template-columns:1fr 1fr;}
+.equip-block .imgs .ph{aspect-ratio:4/3;border-radius:3px;border-color:#E5E5E5;}
+.equip-block .spec{
+  font-family:var(--font-sans);font-size:0.86rem;letter-spacing:0.01em;font-weight:600;
+  color:var(--text);line-height:1.7;margin-bottom:10px;
+}
+.equip-block.emphasis .spec{color:var(--brand);}
+.equip-block .desc{font-family:var(--font-sans);font-size:0.92rem;color:#333333;line-height:1.85;}
+
+.equip-foot{margin-top:56px;font-size:0.86rem;color:var(--text-soft);white-space:nowrap;}
+@media (max-width:900px){.equip-foot{white-space:normal;line-height:1.8;}}
+
+/* ---------------- OUTLINE ---------------- */
+.outline-table{width:100%;max-width:760px;margin:0 auto;border-collapse:collapse;}
+.outline-table tr{border-top:1px solid var(--line);}
+.outline-table tr:last-child{border-bottom:1px solid var(--line);}
+.outline-table th,.outline-table td{text-align:left;padding:18px 12px;vertical-align:top;font-weight:300;}
+.outline-table th{
+  width:180px;font-family:var(--font-sans);font-weight:500;font-size:0.8rem;letter-spacing:0.02em;color:var(--text-soft);
+}
+.outline-table td{font-family:var(--font-sans);font-size:0.95rem;color:var(--text-body);}
+@media (max-width:640px){
+  .outline-table,.outline-table tbody,.outline-table tr,.outline-table th,.outline-table td{display:block;width:auto;}
+  .outline-table tr{padding:16px 0;}
+  .outline-table th{padding-bottom:4px;}
+  .outline-table td{padding-top:0;}
+}
+
+/* ---------------- INLINE CTA（中間導線） ---------------- */
+.inline-cta{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:36px var(--gutter);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;
+}
+.inline-cta p{font-family:var(--font-serif-jp);font-size:0.98rem;color:var(--text);}
+
+/* ---------------- INQUIRY / RESERVATION ---------------- */
+.cta-section{
+  background:var(--bg-alt);text-align:center;
+}
+.cta-section .lead{margin-left:auto;margin-right:auto;}
+.cta-button{ margin-top:40px; }
+.cta-phone-wrap{margin-top:16px;}
+.cta-phone-button{
+  display:inline-block;padding:18px 40px;background:transparent;color:var(--text);
+  font-family:var(--font-label);font-weight:600;font-size:0.86rem;letter-spacing:0.02em;border-radius:2px;
+  border:1px solid var(--text);transition:background .3s ease,color .3s ease;
+}
+.cta-phone-button:hover{background:var(--text);color:var(--on-accent);}
+.cta-company-note{margin-top:14px;font-size:0.84rem;color:var(--text-soft);max-width:48ch;margin-left:auto;margin-right:auto;}
+
+/* ---------------- FOOTER ---------------- */
+.site-footer{padding:64px 0 40px;border-top:1px solid var(--line);}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;}
+@media (max-width:760px){.footer-grid{grid-template-columns:1fr;gap:32px;}}
+.footer-grid .logo{margin-bottom:16px;}
+.footer-grid dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:0.86rem;color:var(--text-body);}
+.footer-grid dt{color:var(--text-body);}
+.footer-grid dd.footer-phone-value{font-family:var(--font-label);font-weight:600;font-size:1.05rem;color:var(--text);letter-spacing:0.01em;}
+.footer-nav{display:flex;flex-direction:column;gap:10px;}
+.footer-nav a{font-family:var(--font-label);font-weight:500;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-body);}
+.footer-bottom{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.8rem;color:var(--text-soft);}
+.footer-links a{text-decoration:underline;text-underline-offset:3px;}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-utility">
+    <div class="header-utility-inner">
+      <span class="brandline">ZERO FIT｜HOUSEFITの高性能分譲住宅ブランド</span>
+      <div class="contact" id="headerUtilityContact"></div>
+    </div>
+  </div>
+  <div class="header-inner">
+    <a href="#top" class="logo" data-logo>ZERO FIT<small>HOUSEFIT PASSIVE DESIGN LABO</small></a>
+    <nav class="main-nav" aria-label="主要ナビゲーション">
+      <a href="#top">TOP</a>
+      <a href="#plan">PLAN / GALLERY</a>
+      <a href="#location">LOCATION</a>
+      <a href="#equipment">EQUIPMENT</a>
+      <a href="#outline">OUTLINE</a>
+    </nav>
+    <a class="header-cta btn-cta btn-cta--header" data-cta-url href="#">資料請求・見学予約はこちら ›</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="モバイルナビゲーション">
+  <a href="#top">TOP / トップ</a>
+  <a href="#plan">PLAN / GALLERY（間取り・ギャラリー）</a>
+  <a href="#location">LOCATION（周辺環境）</a>
+  <a href="#equipment">EQUIPMENT（性能・仕様）</a>
+  <a href="#outline">OUTLINE（物件概要）</a>
+  <a class="header-cta btn-cta btn-cta--mobilenav" data-cta-url href="#">資料請求・見学予約はこちら ›</a>
+  <div class="mobile-nav-contact" id="mobileNavContact"></div>
+</nav>
+
+<main>
+
+  <!-- FIRST VIEW -->
+  <section class="hero" id="top">
+    <div class="hero-media ph ph--slowzoom" id="heroMedia" data-label="IMAGE PLACEHOLDER: 外観（PC用・横長／SP用・縦長を別々に設定。DATA.assets.images の hero.pc / hero.sp）"></div>
+    <div class="hero-copy reveal">
+      <span class="eyebrow" data-bind="project.catchEn"></span>
+      <h1 class="hero-title" data-bind="hero.headline"></h1>
+      <div class="hero-meta">
+        <div>Project<strong data-bind="project.nameJp"></strong></div>
+        <div>Type<strong data-bind="project.nameSub"></strong></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="inline-cta reveal">
+      <p>まずは日程だけ、押さえておきたい方へ。</p>
+      <a class="inline-cta-link btn-cta btn-cta--inline" data-cta-url href="#">資料請求・見学予約はこちら ›</a>
+    </div>
+  </div>
+
+  <!-- PICKUP（要点を3〜5秒で理解させる情報ストリップ） -->
+  <section class="pickup-strip" aria-label="物件の要点">
+    <div class="container">
+      <div class="pickup-strip-head">
+        <span class="eyebrow">PROJECT POINTS</span>
+        <span class="sub">この物件の4つのポイント</span>
+      </div>
+      <div class="pickup-strip-grid" id="pickupGrid"></div>
+    </div>
+  </section>
+
+  <!-- CONCEPT（ZERO FITのブランドコンセプト） -->
+  <section class="section" id="concept" aria-label="ZERO FITのコンセプト">
+    <div class="container">
+      <div class="concept-wrap reveal">
+        <span class="eyebrow">CONCEPT</span>
+        <p class="concept-catch" data-bind="concept.catch"></p>
+        <p class="lead concept-lead" data-bind="concept.text"></p>
+      </div>
+      <div class="concept-pillars reveal" id="conceptPillars"></div>
+    </div>
+  </section>
+
+  <!-- COMPANY / HOUSEFIT -->
+  <section class="section" id="company" aria-label="会社紹介">
+    <div class="container">
+      <div class="company-wrap">
+        <div class="company-body reveal">
+          <span class="eyebrow">HOUSEFIT × ZERO FIT</span>
+          <h2 class="heading-en" data-bind="company.title"></h2>
+          <p class="lead" data-bind="company.text"></p>
+          <div class="company-flow" id="companyFlow"></div>
+        </div>
+        <div class="ph ph--slowzoom reveal" data-img-key="company.office" data-img-alt="社屋・スタッフ" data-label="IMAGE PLACEHOLDER: 社屋・スタッフ（1:1素材／表情が伝わるスタッフの自然なカット推奨）"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAN / GALLERY（住まいの雰囲気を伝えるビジュアルブレイク） -->
+  <section class="section section--alt" id="plan" aria-label="室内の雰囲気">
+    <div class="container">
+      <div class="plan-visual-grid">
+        <div class="plan-visual-item plan-visual-item--main reveal">
+          <span class="plan-visual-label">INTERIOR IMAGE</span>
+          <div class="ph ph--slowzoom" data-img-key="plan.ldk" data-img-alt="LDK" data-label="IMAGE PLACEHOLDER: LDK（4:3）"></div>
+        </div>
+        <div class="plan-visual-item plan-visual-item--sub reveal">
+          <span class="plan-visual-label">INTERIOR IMAGE</span>
+          <div class="ph ph--slowzoom" data-img-key="plan.stairs" data-img-alt="階段・吹き抜け" data-label="IMAGE PLACEHOLDER: 階段・吹き抜け（4:3）"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="inline-cta reveal">
+      <p>間取りは、現地に立って感じるとよく分かります。</p>
+      <a class="inline-cta-link btn-cta btn-cta--inline" data-cta-url href="#">資料請求・見学予約はこちら ›</a>
+    </div>
+  </div>
+
+  <!-- LOCATION（エリア紹介） -->
+  <section class="section" id="location" aria-label="周辺環境">
+    <div class="container">
+      <div class="location-wrap">
+        <div class="ph ph--slowzoom reveal" data-img-key="location.town" data-img-alt="街並み・生活風景" data-label="IMAGE PLACEHOLDER: 街並み・生活風景（1:1素材／人物が写る自然な生活シーン推奨）"></div>
+        <div class="location-body reveal">
+          <span class="eyebrow">LOCATION</span>
+          <h2 class="heading-en" data-bind="location.title"></h2>
+          <p class="lead" data-bind="location.text"></p>
+          <ul class="location-points" id="locationPoints"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVING FACILITIES -->
+  <section class="section section--alt" id="facilities" aria-label="周辺施設">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">LIVING FACILITIES</span>
+        <h2 class="heading-en">毎日の暮らしに、必要な場所が近くに。</h2>
+        <p class="lead">徒歩の分数は、この土地からの目安距離です。</p>
+      </div>
+      <div class="loc-cards reveal" id="facilityCards"></div>
+      <p class="loc-note">毎日の暮らしに必要な場所が、身近にそろっています。</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="inline-cta reveal">
+      <p>陽当たりや街の空気は、現地でこそ伝わります。</p>
+      <a class="inline-cta-link btn-cta btn-cta--inline" data-cta-url href="#">資料請求・見学予約はこちら ›</a>
+    </div>
+  </div>
+
+  <!-- EQUIPMENT / PERFORMANCE -->
+  <section class="section" id="equipment" aria-label="性能・仕様">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">EQUIPMENT / PERFORMANCE</span>
+        <h2 class="heading-en" data-bind="equipment.heading"></h2>
+        <p class="lead" data-bind="equipment.intro"></p>
+      </div>
+      <div id="equipmentGroups"></div>
+      <p class="equip-foot" data-bind="equipment.closing"></p>
+    </div>
+  </section>
+
+  <!-- OUTLINE -->
+  <section class="section section--alt" id="outline" aria-label="物件概要">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">OUTLINE</span>
+        <h2 class="heading-en">物件概要</h2>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="outline-table reveal" id="outlineTable"></table>
+      </div>
+    </div>
+  </section>
+
+  <!-- INQUIRY / RESERVATION -->
+  <section class="section cta-section" id="inquiry" aria-label="資料請求・見学予約">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">INQUIRY / RESERVATION</span>
+        <h2 class="heading-en" data-bind="ctaSection.title"></h2>
+        <p class="lead" data-bind="ctaSection.text"></p>
+        <a class="cta-button btn-cta btn-cta--main" data-cta-url href="#">資料請求・見学予約はこちら ›</a>
+        <p class="cta-phone-wrap">
+          <a class="cta-phone-button" data-bind="company_contact.phoneMain" href="#" id="ctaPhoneLink"></a>
+        </p>
+        <p class="cta-company-note" data-bind="company.footerNote"></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" data-logo>ZERO FIT<small>HOUSEFIT PASSIVE DESIGN LABO</small></div>
+      </div>
+      <dl id="footerContact"></dl>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="#top">TOP</a>
+        <a href="#plan">PLAN / GALLERY</a>
+        <a href="#location">LOCATION</a>
+        <a href="#equipment">EQUIPMENT</a>
+        <a href="#outline">OUTLINE</a>
+        <a data-cta-url href="#">INQUIRY / 資料請求・見学予約</a>
+        <a id="footerSiteLink" href="#" target="_blank" rel="noopener">公式サイト（life-label.com）</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span data-bind="company.copyright"></span>
+      <span class="footer-links">物件情報は取得時点のものです。最新情報は現地見学会・担当者へご確認ください。</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn-cta btn-cta--fixed" data-cta-url href="#">資料請求・見学予約はこちら ›</a>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — 物件情報・コピーの一元管理オブジェクト
+   数値・事実情報を変更する場合はここだけを編集してください。
+   ========================================================================== */
+const DATA = {
+  ctaUrl: "https://www.ie-miru.jp/cms/yoyaku/hf/events/113801",
+
+  /* 画像・ロゴの差し替えは、ここに URL を追加するだけで反映されます。
+     キーはページ内の IMAGE PLACEHOLDER 表示（key: ◯◯）と対応しています。
+     未設定のキーは仮プレースホルダーのまま表示されます。
+     ※ すべての写真は 1:1（正方形）でご用意ください。 */
+  assets: {
+    logoUrl: null, // 例: "https://example.com/zerofit-logo.svg"
+    images: {
+      "hero.pc": "http://www.life-label.com/web/wp-content/uploads/2026/09/ChatGPT-Image-2026年9月5日-16_27_32-1.png",
+      "hero.sp": "http://www.life-label.com/web/wp-content/uploads/2026/09/ChatGPT-Image-2026年9月5日-16_27_32-2.png",
+      "plan.ldk": "http://www.life-label.com/web/wp-content/uploads/2026/09/ChatGPT-Image-2026年7月4日-14_41_55-1.png",
+      "plan.stairs": "http://www.life-label.com/web/wp-content/uploads/2026/09/ChatGPT-Image-2026年7月4日-14_43_03-1.png",
+      "company.office": "http://www.life-label.com/web/wp-content/uploads/2026/09/0903_-2-scaled.jpg",
+      "facility.school1": "http://www.life-label.com/web/wp-content/uploads/2026/09/蔵波小学校.jpg",
+      "facility.school2": "http://www.life-label.com/web/wp-content/uploads/2026/09/蔵波中学校.jpeg",
+      "facility.kinder": "http://www.life-label.com/web/wp-content/uploads/2026/09/幼稚園.png",
+      "facility.supermarket": "http://www.life-label.com/web/wp-content/uploads/2026/09/尾張屋長浦店スーパー.jpg",
+      "facility.aeon": "http://www.life-label.com/web/wp-content/uploads/2026/09/イオン長浦店.jpg",
+      "facility.shimamura": "http://www.life-label.com/web/wp-content/uploads/2026/09/しまむら.png",
+      "facility.yax": "http://www.life-label.com/web/wp-content/uploads/2026/09/ChatGPT-Image-2026年9月5日-13_24_10.png",
+      "facility.station": "http://www.life-label.com/web/wp-content/uploads/2026/09/JR内房線「長浦」駅.jpg",
+      "location.town": "http://www.life-label.com/web/wp-content/uploads/2026/09/ChatGPT-Image-2026年9月5日-17_28_12.png",
+      "facility.hospital": "http://www.life-label.com/web/wp-content/uploads/2026/09/病院.png",
+      "equip.grade": "http://www.life-label.com/web/wp-content/uploads/2026/09/断熱等級.png",
+      "equip.glasswool": "http://www.life-label.com/web/wp-content/uploads/2026/09/グラスウール.png",
+      "equip.vaporbarrier": "http://www.life-label.com/web/wp-content/uploads/2026/09/6べーパーバリア.jpg",
+      "equip.window": "http://www.life-label.com/web/wp-content/uploads/2026/09/8窓サッシ　APW330.jpg",
+      "equip.cvalue": "http://www.life-label.com/web/wp-content/uploads/2026/09/ｃ値.png",
+      "equip.ventilation": "http://www.life-label.com/web/wp-content/uploads/2026/09/すみか.png",
+      "equip.2x4": "http://www.life-label.com/web/wp-content/uploads/2026/09/２×４.png",
+      "equip.seismic": "http://www.life-label.com/web/wp-content/uploads/2026/09/耐震.jpg",
+      "equip.neko": "http://www.life-label.com/web/wp-content/uploads/2026/09/ねこ.png",
+      "equip.roof": "http://www.life-label.com/web/wp-content/uploads/2026/09/7屋根　ガルバリウム鋼板屋根.jpg",
+      "equip.wall": "http://www.life-label.com/web/wp-content/uploads/2026/09/EX断熱.png",
+      "equip.after": "http://www.life-label.com/web/wp-content/uploads/2026/09/メンテナンス.png"
+    }
+  },
+
+  project: {
+    nameJp: "袖ケ浦市蔵波台5丁目",
+    nameSub: "新築分譲住宅 全2棟",
+    catchEn: "ZERO FIT / SODEGAURA KURANAMIDAI"
+  },
+
+  hero: {
+    headline: "千葉県袖ケ浦市蔵波台。\n陽当たりの良い高台に誕生する、ZERO FITの新築分譲住宅 全2棟です。"
+  },
+
+  concept: {
+    catch: "光と風の心地よさに、\n先進の安心を。\nそして、確かな資産。",
+    text: "陽射しと風を暮らしに取り込む設計、快適さと安心を支える住宅性能、そして長く住み継がれることまで見据えた住まいづくり。ZERO FITは、この3つの視点から丁寧に住まいを形にしています。",
+    pillars: [
+      { en: "DESIGN", jp: "光と風を取り込む住まい" },
+      { en: "PERFORMANCE", jp: "快適さと安心を支える性能" },
+      { en: "VALUE", jp: "長く暮らすことを見据えた住まい" }
+    ]
+  },
+
+  pickup: [
+    { val: "全2棟", small: null, lbl: "UNITS" },
+    { val: "敷地42坪超", small: "42.64〜43.36坪", lbl: "LAND AREA" },
+    { val: "南道路 × 高台", small: null, lbl: "LOCATION" },
+    { val: "売主物件", small: "仲介手数料不要", lbl: "DIRECT SALES" }
+  ],
+
+  company: {
+    title: "この物件は、\nHOUSEFITが手がける\nZERO FITの分譲住宅です。",
+    text: "有限会社ハウスフィットは、千葉県市原市を拠点に、土地探し・資金計画・設計・施工・アフターフォローまでを一貫してご相談いただける一級建築士事務所です。ZERO FITは、そのHOUSEFITが手がける高性能分譲住宅のブランドで、光と風を取り込む住まいづくりと、将来にわたる安心を大切にしています。この物件も自社売主のため、土地のことも建物のことも、同じ窓口でお話しいただけます。",
+    footerNote: "土地探しから資金計画、設計・施工、アフターフォローまで。\n住生活に関わるご相談を、ひとつの窓口で承ります。",
+    copyright: "© 有限会社ハウスフィット 一級建築士事務所"
+  },
+
+  location: {
+    title: "蔵波台という街で、\n暮らしを描く。",
+    text: "蔵波台は、住宅街としての落ち着きと、日々の買い物や通学のしやすさを両立させたエリアです。高台に位置するこの土地は、陽当たりの良さも大きな魅力のひとつです。南側道路に接する整形地で、周辺の交通量も比較的少なく、静かな時間を過ごしていただけます。",
+    points: [
+      "南側道路に接する、整形地の2区画です。",
+      "周辺の交通量は比較的少なく、静かな住環境です。",
+      "小学校・中学校ともに徒歩圏内にあります。"
+    ]
+  },
+
+  facilities: [
+    { key: "facility.school1", name: "蔵波小学校", minutes: 9, meters: 698 },
+    { key: "facility.school2", name: "蔵波中学校", minutes: 12, meters: 924 },
+    { key: "facility.kinder", name: "蔵波台さつき幼稚園", minutes: 14, meters: 1094 },
+    { key: "facility.supermarket", name: "VERY FOODS 尾張屋長浦店", minutes: 10, meters: 779 },
+    { key: "facility.aeon", name: "イオン長浦店", minutes: 22, meters: 1744 },
+    { key: "facility.shimamura", name: "ファッションセンターしまむら長浦店", minutes: 19, meters: 1459 },
+    { key: "facility.yax", name: "ヤックスドラッグ 袖ケ浦店", minutes: 6, meters: 431 },
+    { key: "facility.station", name: "JR内房線「長浦」駅", minutes: 24, meters: 1600 },
+    { key: "facility.hospital", name: "社会医療法人社団さつき会 袖ヶ浦さつき台病院", minutes: 20, meters: 1579 }
+  ],
+
+  equipment: {
+    heading: "性能は、暮らし続ける時間に効く。",
+    intro: "断熱・気密・換気・構造。毎日の心地よさと、この先の安心につながる性能を、住まいの基本として整えています。",
+    closing: "ここでご紹介した数値は、HOUSEFITの標準的な仕様・施工実績にもとづくものです。本物件専用の仕様詳細は、見学会または個別相談にてご確認いただけます。",
+    groups: [
+      {
+        en: "COMFORT", jp: "快適性",
+        items: [
+          { emphasis: true, en: "INSULATION", title: "外の気温を、室内へ伝えにくく。",
+            spec: "断熱等級6／UA値 0.39",
+            desc: "屋根・壁・床の断熱性能を高い水準で確保。外気の影響を受けにくく、室温が安定しやすい住まいです。",
+            images: ["equip.grade"] },
+          { en: "INSULATION LAYERS", title: "断熱を、隙間なく積み重ねる。",
+            spec: "室内グラスウール＋室外EX断熱＋天井断熱＋基礎断熱",
+            desc: "室内外・天井・基礎と断熱材を重ねて施工。建物全体を隙間なく包み込む考え方です。",
+            images: ["equip.glasswool"] },
+          { en: "VAPOR BARRIER", title: "目に見えない場所こそ、丁寧に。",
+            spec: "ベーパーバリア　全棟標準施工",
+            desc: "壁内の結露を防ぐ気密シートを全棟で標準施工。建物の耐久性を支える工程です。",
+            images: ["equip.vaporbarrier"] },
+          { en: "WINDOWS", title: "窓際の暑さ・寒さを、抑える。",
+            spec: "高性能樹脂窓 APW330",
+            desc: "熱の出入りが大きい窓に高性能樹脂窓を採用。窓際の温度差をやわらげます。",
+            images: ["equip.window"] },
+          { emphasis: true, en: "AIRTIGHTNESS", title: "すき間の少なさを、数字で確かめる。",
+            spec: "HOUSEFIT平均C値 0.5〜0.6（施工実績）／全棟気密測定",
+            desc: "C値は家のすき間の少なさを表す数値。HOUSEFITでは全棟で気密測定を行い、施工精度を数字で確認しています。",
+            images: ["equip.cvalue"] },
+          { en: "VENTILATION", title: "空気を入れ替えながら、熱を逃さない。",
+            spec: "第一種熱交換式換気 sumika",
+            desc: "換気で入れ替わる空気の熱を回収する仕組み。温度を保ちながら室内の空気をきれいに保ちます。",
+            images: ["equip.ventilation"] }
+        ]
+      },
+      {
+        en: "SAFETY", jp: "安心",
+        items: [
+          { en: "STRUCTURE", title: "木造住宅の基本を、正しく。",
+            spec: "2×4工法",
+            desc: "面で建物を支える2×4工法を採用。地震や台風の力を建物全体で受け止めます。",
+            images: ["equip.2x4"] },
+          { emphasis: true, en: "STRUCTURAL CALCULATION", title: "一棟ごとに、構造を計算する。",
+            spec: "全棟構造計算／耐震等級2",
+            desc: "全棟で構造計算を実施し、耐震等級2を確保。数値にもとづいた裏付けのある強さです。",
+            images: ["equip.seismic"] },
+          { en: "SEISMIC ISOLATION", title: "揺れそのものを、受け流す。",
+            spec: "ねこ免震",
+            desc: "基礎と建物の間で地震の揺れを受け流す、免震の仕組みを採用しています。",
+            images: ["equip.neko"] }
+        ]
+      },
+      {
+        en: "LONG LIFE", jp: "長く住むための備え",
+        items: [
+          { en: "ROOF", title: "屋根から、長く守る。",
+            spec: "ガルバリウム鋼板",
+            desc: "錆びに強く軽量なガルバリウム鋼板を屋根材に採用。建物への負担を抑えながら長く守ります。",
+            images: ["equip.roof"] },
+          { en: "EXTERIOR WALL", title: "外壁も、断熱とセットで。",
+            spec: "EX断熱＋塗り壁仕上げ",
+            desc: "外壁にも断熱材を重ね、仕上げは塗り壁で。見た目の美しさと性能を両立します。",
+            images: ["equip.wall"] },
+          { en: "AFTER SERVICE", title: "建てたあとも、そばにいる。",
+            spec: "定期点検・メンテナンス体制",
+            desc: "引き渡し後も定期点検やメンテナンスを通じて、暮らしが続く時間に寄り添います。",
+            images: ["equip.after"] }
+        ]
+      }
+    ]
+  },
+
+  outline: [
+    { label: "所在地", value: "千葉県袖ケ浦市蔵波台5丁目" },
+    { label: "交通", value: "JR内房線「長浦」駅 徒歩24分" },
+    { label: "土地面積", value: "140.97㎡〜143.35㎡（約42.64坪〜43.36坪）全2区画" },
+    { label: "用途地域", value: "第一種低層住居専用地域" },
+    { label: "建ぺい率／容積率", value: "50％／100％" },
+    { label: "地目", value: "宅地" },
+    { label: "接道状況", value: "南側 幅員約5.7mの公道に接面" },
+    { label: "設備", value: "電気・公営水道・公共下水・都市ガス" },
+    { label: "学校区", value: "袖ケ浦市立蔵波小学校／袖ケ浦市立蔵波中学校" },
+    { label: "取引態様", value: "売主（仲介手数料不要）" },
+    { label: "販売戸数", value: "全2区画" }
+  ],
+
+  ctaSection: {
+    title: "この場所での暮らしを、\n現地で確かめてみませんか。",
+    text: "資料だけでは分からない陽当たりや街の空気を、実際にご覧いただけます。建物込みのお見積りにつきましては仕様により異なりますため、詳細はお気軽にお問い合わせください。"
+  },
+
+  company_contact: {
+    name: "有限会社ハウスフィット　一級建築士事務所",
+    phoneMain: "0120-510-903",
+    address: "千葉県市原市五井中央東2-17-18 フィットビル2F",
+    hours: "9:00〜19:00",
+    closed: "水曜日",
+    site: "https://www.life-label.com/"
+  }
+};
+
+/* ==========================================================================
+   RENDER
+   ========================================================================== */
+function setText(el, val){ if(el) el.textContent = val; }
+function nl2br(text){
+  const frag = document.createDocumentFragment();
+  String(text).split('\n').forEach((line,i)=>{
+    if(i>0) frag.appendChild(document.createElement('br'));
+    frag.appendChild(document.createTextNode(line));
+  });
+  return frag;
+}
+function getPath(obj, path){
+  return path.split('.').reduce((o,k)=> (o==null? undefined : o[k]), obj);
+}
+function bindAll(){
+  document.querySelectorAll('[data-bind]').forEach(el=>{
+    const val = getPath(DATA, el.getAttribute('data-bind'));
+    if(val==null) return;
+    if(el.id === 'ctaPhoneLink'){
+      el.setAttribute('href', 'tel:' + String(val).replace(/-/g,''));
+      el.textContent = 'お電話でのお問い合わせ　' + val;
+      return;
+    }
+    el.textContent='';
+    el.appendChild(nl2br(val));
+  });
+  document.querySelectorAll('[data-cta-url]').forEach(el=> el.setAttribute('href', DATA.ctaUrl));
+}
+
+function ph(key,label,extraClass){
+  const url = DATA.assets && DATA.assets.images && DATA.assets.images[key];
+  if(url){
+    return `<div class="ph has-image ${extraClass||''}"><img src="${url}" alt="${label}" loading="lazy"></div>`;
+  }
+  return `<div class="ph ${extraClass||''}" data-label="IMAGE PLACEHOLDER: ${label}（1:1／key: ${key}）"></div>`;
+}
+
+function applyStaticImages(){
+  document.querySelectorAll('[data-img-key]').forEach(el=>{
+    const key = el.getAttribute('data-img-key');
+    const url = DATA.assets && DATA.assets.images && DATA.assets.images[key];
+    if(!url) return;
+    el.classList.add('has-image');
+    el.innerHTML = `<img src="${url}" alt="${el.getAttribute('data-img-alt')||''}" loading="lazy">`;
+  });
+}
+
+function renderHeroImage(){
+  // TOP画像はPC/SPで別素材を使用（<picture>で出し分け）。
+  // 差し替えは DATA.assets.images の hero.pc（横長・PC用）／hero.sp（縦長・SP用）を編集するだけです。
+  const el = document.getElementById('heroMedia');
+  const imgs = (DATA.assets && DATA.assets.images) || {};
+  const pcUrl = imgs['hero.pc'];
+  const spUrl = imgs['hero.sp'];
+  if(!pcUrl && !spUrl) return; // 未設定の場合はプレースホルダーのまま
+  el.classList.add('has-image');
+  const mainSrc = pcUrl || spUrl;
+  el.innerHTML = `
+    <picture>
+      ${spUrl ? `<source media="(max-width: 767px)" srcset="${spUrl}">` : ''}
+      <img src="${mainSrc}" alt="外観（袖ケ浦市蔵波台5丁目 ZERO FIT 全2棟）" loading="eager">
+    </picture>`;
+}
+
+function renderLogos(){
+  const url = DATA.assets && DATA.assets.logoUrl;
+  if(!url) return; // 未設定の場合は既定のテキストロゴのまま
+  document.querySelectorAll('[data-logo]').forEach(el=>{
+    el.innerHTML = `<img src="${url}" alt="${DATA.company_contact.name}" style="height:34px;width:auto;display:block;">`;
+  });
+}
+
+function renderHeaderContact(){
+  const c = DATA.company_contact;
+  const telHref = 'tel:' + c.phoneMain.replace(/-/g,'');
+  document.getElementById('headerUtilityContact').innerHTML =
+    `<a href="${telHref}">${c.phoneMain}</a><span>営業時間 ${c.hours}</span><span>${c.closed}定休</span>`;
+  document.getElementById('mobileNavContact').innerHTML =
+    `<a href="${telHref}">${c.phoneMain}</a><br>営業時間 ${c.hours}／${c.closed}定休`;
+}
+
+function renderPickup(){
+  const grid = document.getElementById('pickupGrid');
+  grid.innerHTML = DATA.pickup.map((p,i)=>`
+    <div class="pickup-strip-item reveal" style="--i:${i}">
+      <div class="val">${p.val}${p.small? `<small>${p.small}</small>` : ''}</div>
+      <span class="lbl">${p.lbl}</span>
+    </div>`).join('');
+}
+
+function renderConceptPillars(){
+  const el = document.getElementById('conceptPillars');
+  el.innerHTML = DATA.concept.pillars.map(p=>`<div><span>${p.en}</span><p>${p.jp}</p></div>`).join('');
+}
+
+function renderCompanyFlow(){
+  const el = document.getElementById('companyFlow');
+  el.innerHTML = [
+    { en:"LAND", d:"土地探し・条件のご相談" },
+    { en:"DESIGN", d:"資金計画・設計のご相談" },
+    { en:"BUILD", d:"施工・アフターフォロー" }
+  ].map(f=>`<div><span>${f.en}</span><p>${f.d}</p></div>`).join('');
+}
+
+function renderLocationPoints(){
+  const ul = document.getElementById('locationPoints');
+  ul.innerHTML = DATA.location.points.map(t=>`<li>${t}</li>`).join('');
+}
+
+function renderFacilities(){
+  const wrap = document.getElementById('facilityCards');
+  wrap.innerHTML = DATA.facilities.map(it=>`
+    <div class="loc-card">
+      <div class="thumb">${ph(it.key, it.name)}</div>
+      <div class="body">
+        <div class="name">${it.name}</div>
+        <div class="dist">徒歩<span class="num">${it.minutes}</span>分／約<span class="num">${it.meters}</span>m</div>
+      </div>
+    </div>`).join('');
+}
+
+function renderEquipment(){
+  const wrap = document.getElementById('equipmentGroups');
+  wrap.innerHTML = DATA.equipment.groups.map(g=>`
+    <div class="equip-group reveal">
+      <div class="equip-group-head">
+        <span class="en">${g.en}</span>
+        <span class="jp">${g.jp}</span>
+      </div>
+      <div class="equip-grid">
+        ${g.items.map(it=>`
+          <div class="equip-block ${it.emphasis?'emphasis':''}">
+            <span class="en">${it.en}</span>
+            <p class="title">${it.title}</p>
+            <div class="imgs ${it.images.length>1?'dual':''}">
+              ${it.images.map(k=> ph(k, it.title)).join('')}
+            </div>
+            <p class="spec">${it.spec}</p>
+            <p class="desc">${it.desc}</p>
+          </div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+
+function renderOutline(){
+  const table = document.getElementById('outlineTable');
+  table.innerHTML = DATA.outline.map(row=>`
+    <tr><th>${row.label}</th><td>${row.value}</td></tr>
+  `).join('');
+}
+
+function renderFooter(){
+  const c = DATA.company_contact;
+  const nameBr = c.name.replace('　', '<br>');
+  const addressBr = c.address.replace('フィットビル', '<br>フィットビル');
+  document.getElementById('footerContact').innerHTML = `
+    <dt>会社名</dt><dd style="margin:0;">${nameBr}</dd>
+    <dt>電話番号</dt><dd class="footer-phone-value" style="margin:0;">${c.phoneMain}</dd>
+    <dt>所在地</dt><dd style="margin:0;">${addressBr}</dd>
+    <dt>営業時間</dt><dd style="margin:0;">${c.hours}</dd>
+    <dt>定休日</dt><dd style="margin:0;">${c.closed}</dd>
+  `;
+  const site = document.getElementById('footerSiteLink');
+  site.href = c.site;
+}
+
+function initHeaderScroll(){
+  const header = document.getElementById('siteHeader');
+  const onScroll = ()=> header.classList.toggle('scrolled', window.scrollY > 20);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive:true });
+}
+
+function initMobileNav(){
+  const btn = document.getElementById('hamburgerBtn');
+  const nav = document.getElementById('mobileNav');
+  btn.addEventListener('click', ()=>{
+    const open = !nav.classList.contains('open');
+    nav.classList.toggle('open', open);
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  nav.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=>{
+    nav.classList.remove('open'); btn.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+  }));
+}
+
+function initReveal(){
+  const items = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    items.forEach(i=> i.classList.add('is-visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  items.forEach(i=> io.observe(i));
+}
+
+function initSmoothAnchors(){
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if(!target) return;
+      e.preventDefault();
+      const headerH = document.getElementById('siteHeader').offsetHeight;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerH + 1;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  bindAll();
+  renderHeroImage();
+  renderHeaderContact();
+  renderPickup();
+  renderConceptPillars();
+  renderCompanyFlow();
+  renderLocationPoints();
+  renderFacilities();
+  renderEquipment();
+  renderOutline();
+  renderFooter();
+  applyStaticImages();
+  renderLogos();
+  initHeaderScroll();
+  initMobileNav();
+  initReveal();
+  initSmoothAnchors();
+});
+</script>
+</body>
+</html>
